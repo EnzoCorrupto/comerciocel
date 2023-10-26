@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import {AiOutlineSearch} from "react-icons/ai"
+import {AiOutlineHome} from "react-icons/ai"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="Container">
+      <h1 className="title">LojinhaCell</h1>
+        <div className="ContainerInput">
+            <input 
+            type="text"
+            placeholder="Pesquise aqui">
+            </input>
+            <button className="buttonSearch">
+              <AiOutlineSearch
+              size={18}
+              color="black"/>
+            </button>
+            <button className="buttonHome">
+              <AiOutlineHome
+              size={18}
+              color="black">
+              </AiOutlineHome>
+            </button>
+            <button className="buttonLogin"
+            type="button">
+              Login
+            </button>
+
+          
+        </div>
+
     </div>
   );
 }
