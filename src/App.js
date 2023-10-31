@@ -6,28 +6,38 @@ function App() {
     <div className="Container">
       <h1 className="title">LojinhaCell</h1>
         <div className="ContainerInput">
+            <div>
             <input 
             type="text"
-            placeholder="Pesquise aqui">
+            placeholder="Pesquise aqui" className="pesquisa">
             </input>
+            </div>
+            <div>
             <button className="buttonSearch">
               <AiOutlineSearch
               size={18}
               color="black"/>
             </button>
+            </div>
+            <div>
             <button className="buttonHome">
               <AiOutlineHome
               size={18}
               color="black">
               </AiOutlineHome>
             </button>
+            </div>
+            <div>
             <button className="buttonLogin"
             type="button">
               Login
             </button>
-
-          
+            </div>
+           
         </div>
+
+
+
 
     </div>
   );

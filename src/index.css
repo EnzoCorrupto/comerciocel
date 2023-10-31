@@ -1,17 +1,39 @@
-*{
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-.Container{
-  background-color: lightblue;
+.Container {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  height: 50px;
+  justify-content: space-around;
+  align-items: center;
+  height: 70px;
   padding: 10px;
+  background-color: aqua;
 }
 
-.buttonHome{
-  order: -1;
+.ContainerInput {
+  display: flex;
+  align-items: center;
+}
+
+.pesquisa {
+  margin-right: 10px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.buttonSearch,
+.buttonHome,
+.buttonLogin {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.title {
+  font-family: fantasy;
 }
