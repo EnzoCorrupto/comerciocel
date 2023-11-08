@@ -1,46 +1,24 @@
-import {AiOutlineSearch} from "react-icons/ai"
-import {AiOutlineHome} from "react-icons/ai"
+import navbar from "./components/navbar"
+import {Routes, Route} from "react-router-dom"
+import Home from "./components/pages/Home"
+import Login from "./components/pages/Login"
+import Register from "./components/pages/Register"
+import Navbar from "./components/navbar"
+
+
 
 function App() {
   return (
-    <div className="Container">
-      <h1 className="title">LojinhaCell</h1>
-        <div className="ContainerInput">
-            <div>
-            <input 
-            type="text"
-            placeholder="Pesquise aqui" className="pesquisa">
-            </input>
-            </div>
-            <div>
-            <button className="buttonSearch">
-              <AiOutlineSearch
-              size={18}
-              color="black"/>
-            </button>
-            </div>
-            <div>
-            <button className="buttonHome">
-              <AiOutlineHome
-              size={18}
-              color="black">
-              </AiOutlineHome>
-            </button>
-            </div>
-            <div>
-            <button className="buttonLogin"
-            type="button">
-              Login
-            </button>
-            </div>
-           
-        </div>
-
-
-
-
-    </div>
-  );
+      <>
+      <Navbar/>
+        <Routes>
+          <Route path="/" element={<Home />}/> 
+         <Route path="/login" element={<Login />}/> 
+         <Route path="/register" element={<Register />}/>
+  
+      </Routes>
+      </>
+  )
 }
 
 export default App;
