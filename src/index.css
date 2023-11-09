@@ -36,7 +36,8 @@
 }
 
 .title {
-  font-family: fantasy;
+  font-family: Poppins;
+  font-weight:bolder;
 }
 
 .buttonSearch:hover, .buttonLogin:hover, .buttonRegister:hover, .buttonHome:hover{
