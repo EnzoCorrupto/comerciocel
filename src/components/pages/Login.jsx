@@ -5,7 +5,7 @@ export default function Login() {
   return (
     <div className='containerforms'>
         <form>
-            <div id='header'>Registro</div>
+            <div id='header'>Login</div>
             <div className='containerInput'>
 
                 <div>
@@ -23,7 +23,7 @@ export default function Login() {
                 <input  type='password' placeholder='@edubr123'/>
 
             </div>
-                <button id='btnconfirma'>Register</button>
+                <button id='btnconfirma'>Login</button>
         </form>
 
     </div>

@@ -4,7 +4,7 @@ import {AiOutlineSearch} from "react-icons/ai"
 export default function Navbar() {
   return <nav>
     <div className="Container">
-      <h1 className="title">LojinhaCell</h1>
+      <h1 className="title">LOJINHACELL</h1>
         <div className="ContainerInput">
             <div>
             <input 
