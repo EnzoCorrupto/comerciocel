@@ -6,38 +6,40 @@ import Register from "./components/pages/Register"
 import Navbar from "./components/navbar"
 import "../src/index.css"
 import ProductCard from './components/cards/cards'; // Importe o componente
+import {useState, useEffect} from "react";
+import axios from "axios";
 
-const products = [
-    {
-    id: 1,
-    name: 'Iphone 13',
-    description: 'Melhor celular do mercado',
-    price: 100.00,
-    image: ""
-    },
-    {
-      id: 2,
-      name: 'Produto 2',
-      description: 'Descrição do Produto 2...',
-      price: 150.00,
-      image: 'caminho/para/imagem2.jpg',
-      category: 'Moda'
-    },
-];
 
 function App() {
+  const [produtos, setProdutos] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:3333/produtos')
+      .then(response => {
+        setProdutos(response.data);
+      })
+      .catch(error => {
+        console.error("Erro ao buscar dados:", error);
+      });
+  }, []);
+
   return (
-      <>
+    <>
       <Navbar/>
-        <Routes>
-          <Route path="/" element={<Home/>}/> 
-         <Route path="/login" element={<Login/>}/> 
-         <Route path="/registrar" element={<Register/>}/>
+      <Routes>
+        <Route path="/" element={<Home/>}/> 
+        <Route path="/login" element={<Login/>}/> 
+        <Route path="/registrar" element={<Register/>}/>
       </Routes>
-      {products.map(product => (
-          <ProductCard key={product.id} product={product} />
-        ))}
-      </>
+
+      {produtos.length > 0 ? (
+        produtos.map(produto => (
+          <ProductCard key={produto.id} product={produto} />
+        ))
+      ) : (
+        <p>Nenhum produto encontrado.</p>
+      )}
+    </> 
   )
 }
 
