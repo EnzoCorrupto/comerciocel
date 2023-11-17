@@ -29,7 +29,8 @@
 .buttonSearch,
 .buttonHome,
 .buttonLogin,
-.buttonRegister{
+.buttonRegister,
+.buttonCart{
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -45,7 +46,7 @@ font-family: 'Kenia', sans-serif;
 font-family: 'Tsukimi Rounded', sans-serif;
 }
 
-.buttonSearch:hover, .buttonLogin:hover, .buttonRegister:hover, .buttonHome:hover{
+.buttonSearch:hover, .buttonLogin:hover, .buttonRegister:hover, .buttonHome:hover, .buttonCart:hover{
   background-color:white;
 }
 

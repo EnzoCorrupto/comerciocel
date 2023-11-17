@@ -32,6 +32,7 @@ function App() {
         <Route path="/registrar" element={<Register/>}/>
       </Routes>
 
+      <marra2>
       {produtos.length > 0 ? (
         produtos.map(produto => (
           <ProductCard key={produto.id} product={produto} />
@@ -39,6 +40,9 @@ function App() {
       ) : (
         <p>Nenhum produto encontrado.</p>
       )}
+      </marra2>
+
+      
     </> 
   )
 }
